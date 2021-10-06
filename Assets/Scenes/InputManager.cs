@@ -31,7 +31,11 @@ public class InputManager : MonoBehaviour
     {
         if(context.started)
         {
-            player.Attack();
+            player.Attack(true);
+        }
+        else
+        {
+            player.Attack(false);
         }
     }
 }

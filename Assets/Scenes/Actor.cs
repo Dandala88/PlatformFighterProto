@@ -63,7 +63,16 @@ public class Actor : MonoBehaviour
         }
     }
 
-    public void Attack()
+    public void Attack(bool start)
     {
+        if(start)
+        {
+            anim.SetBool("punched", true);
+        }
+    }
+
+    public void EndAttack()
+    {
+        anim.SetBool("punched", false);
     }
 }
